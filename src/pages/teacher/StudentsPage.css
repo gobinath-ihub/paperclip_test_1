@@ -1,0 +1,70 @@
+.students-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.students-page-header {
+  margin-bottom: 0.25rem;
+}
+
+.students-kicker {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.students-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin: 0 0 0.35rem;
+}
+
+.students-subtitle {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  max-width: 680px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.roster-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .roster-kpis {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roster-kpi-pill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+}
+
+.pill-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.pill-count {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.pill-name {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  font-weight: 600;
+}

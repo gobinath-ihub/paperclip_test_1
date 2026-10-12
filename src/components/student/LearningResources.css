@@ -1,0 +1,30 @@
+.resources-section {
+  border-color: oklch(from var(--primary) l c h / 0.12);
+}
+
+.resources-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resources-icon {
+  color: var(--primary);
+}
+
+.resources-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.875rem;
+}
+
+@media (max-width: 639px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}

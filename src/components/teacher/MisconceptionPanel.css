@@ -1,0 +1,93 @@
+.misconception-panel {
+  border-color: oklch(from var(--warning) l c h / 0.25);
+}
+
+.panel-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.panel-title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.panel-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: oklch(from var(--warning) l c h / 0.15);
+  color: var(--warning);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.panel-subtitle {
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+  margin: 0.2rem 0 0;
+}
+
+.misconceptions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.misconception-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+}
+
+.misconception-info {
+  flex: 1;
+  min-width: 260px;
+}
+
+.misconception-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.35rem;
+}
+
+.misconception-name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.misconception-diagnosis {
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.misconception-action {
+  display: flex;
+  align-items: center;
+}
+
+.intervention-trigger-btn {
+  font-size: 0.8125rem;
+}

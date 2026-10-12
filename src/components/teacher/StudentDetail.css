@@ -1,0 +1,253 @@
+.student-detail-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-top-nav {
+  margin-bottom: -0.5rem;
+}
+
+.student-detail-header-card {
+  padding: 1.5rem 1.75rem;
+}
+
+.detail-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.detail-avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.detail-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: oklch(from var(--primary) l c h / 0.15);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.detail-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+  margin-top: 0.25rem;
+}
+
+.detail-kpis {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.detail-kpi-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.detail-kpi-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.detail-kpi-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.detail-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.detail-tab-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.detail-tab-btn:hover {
+  color: var(--foreground);
+}
+
+.detail-tab-btn.active {
+  background: var(--muted);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.detail-tab-content {
+  margin-top: 0.5rem;
+}
+
+.detail-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .detail-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mastery-summary-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mastery-explanation {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.student-misconception-callout {
+  background: oklch(from var(--warning) l c h / 0.1);
+  border: 1px solid oklch(from var(--warning) l c h / 0.25);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.callout-misconception-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.callout-misconception-desc {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.attempts-sample-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-attempt-card {
+  padding: 1rem 1.25rem;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.attempt-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.attempt-date {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.attempt-q {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.attempt-io-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.sub-tag {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  margin-bottom: 0.2rem;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.prescribe-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.prescribe-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.prescribe-textarea {
+  width: 100%;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+  resize: vertical;
+  outline: none;
+}
+
+.prescribe-textarea:focus {
+  border-color: var(--primary);
+}
+
+.prescribe-actions {
+  display: flex;
+  justify-content: flex-end;
+}

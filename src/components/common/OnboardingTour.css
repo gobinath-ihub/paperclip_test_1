@@ -1,0 +1,136 @@
+.tour-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: oklch(0 0 0 / 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.tour-modal {
+  width: 100%;
+  max-width: 520px;
+}
+
+.tour-card {
+  padding: 1.75rem;
+  box-shadow: 0 20px 40px -10px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(from var(--primary) l c h / 0.3);
+  animation: tour-bounce 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes tour-bounce {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.tour-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.tour-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-close-btn:hover {
+  color: var(--foreground);
+}
+
+.tour-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.tour-body {
+  margin: 1.25rem 0;
+}
+
+.tour-description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.tour-tip-box {
+  background: oklch(from var(--primary) l c h / 0.08);
+  border: 1px solid oklch(from var(--primary) l c h / 0.2);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1rem;
+}
+
+.tour-tip-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.tour-tip-text {
+  font-size: 0.875rem;
+  color: var(--foreground);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.tour-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tour-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--muted-foreground);
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tour-dot.active {
+  width: 24px;
+  background: var(--primary);
+  opacity: 1;
+}
+
+.tour-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.tour-actions {
+  display: flex;
+  gap: 0.5rem;
+}

@@ -1,0 +1,135 @@
+.intervention-panel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.intervention-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.intervention-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.intervention-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: oklch(from var(--primary) l c h / 0.15);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intervention-main-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.intervention-sub {
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+  margin: 0.2rem 0 0;
+}
+
+.interventions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+
+.intervention-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: oklch(from var(--primary) l c h / 0.2);
+  padding: 1.25rem;
+}
+
+.student-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.intervention-student-info {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.intervention-student-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.intervention-student-id {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.intervention-concept {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 0.875rem;
+}
+
+.intervention-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.issue-box,
+.action-box {
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.625rem 0.875rem;
+}
+
+.field-tag {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.text-destructive {
+  color: var(--destructive);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.issue-text,
+.action-text {
+  font-size: 0.8125rem;
+  color: var(--foreground);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.intervention-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 0.875rem;
+}

@@ -1,0 +1,143 @@
+.class-overview-card {
+  height: 100%;
+}
+
+.overview-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.overview-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.overview-meta {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.distribution-stacked-bar {
+  display: flex;
+  height: 12px;
+  width: 100%;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.stacked-segment {
+  height: 100%;
+  transition: width var(--transition-base);
+}
+
+.excelling-seg {
+  background: var(--success);
+}
+
+.active-seg {
+  background: var(--primary);
+}
+
+.struggling-seg {
+  background: var(--warning);
+}
+
+.distribution-legend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .distribution-legend-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.legend-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding: 0.625rem 0.75rem;
+  border-radius: var(--radius-md);
+  background: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.excelling-dot { background: var(--success); }
+.active-dot { background: var(--primary); }
+.struggling-dot { background: var(--warning); }
+
+.legend-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.legend-name {
+  font-size: 0.6875rem;
+  color: var(--muted-foreground);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.legend-count {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.legend-desc {
+  font-size: 0.6875rem;
+  color: var(--muted-foreground);
+  line-height: 1.2;
+}
+
+.topic-mastery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.topic-breakdown-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted-foreground);
+  margin: 0 0 0.25rem;
+}
+
+.topic-prog-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.topic-prog-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: var(--foreground);
+}

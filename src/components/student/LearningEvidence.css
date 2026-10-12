@@ -1,0 +1,235 @@
+.evidence-card {
+  position: sticky;
+  top: calc(var(--topbar-height) + 1.25rem);
+  max-height: calc(100vh - var(--topbar-height) - 2.5rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.evidence-card .card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.evidence-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.evidence-icon {
+  color: var(--warning);
+}
+
+.evidence-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.evidence-mastery {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.mastery-value {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--foreground);
+  line-height: 1;
+}
+
+.mastery-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.evidence-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1.125rem;
+}
+
+.evidence-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.625rem 0.25rem;
+  background: var(--background);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  min-width: 0;
+  transition: border-color var(--transition-fast);
+}
+
+.evidence-stat:hover {
+  border-color: oklch(from var(--primary) l c h / 0.4);
+}
+
+.evidence-stat-icon {
+  color: var(--muted-foreground);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--foreground);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.stat-label {
+  font-size: 0.625rem;
+  color: var(--muted-foreground);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.evidence-timeline {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.timeline-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.evidence-section-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.timeline-count-badge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: oklch(from var(--primary) l c h / 0.12);
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  max-height: 380px;
+  padding-right: 0.35rem;
+  scrollbar-width: thin;
+  scrollbar-color: oklch(from var(--primary) l c h / 0.3) transparent;
+}
+
+.timeline-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.timeline-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.timeline-list::-webkit-scrollbar-thumb {
+  background: oklch(from var(--primary) l c h / 0.25);
+  border-radius: 9999px;
+}
+
+.timeline-list::-webkit-scrollbar-thumb:hover {
+  background: oklch(from var(--primary) l c h / 0.5);
+}
+
+.timeline-entry {
+  padding: 0.75rem 0.875rem;
+  background: var(--background);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: all var(--transition-fast);
+}
+
+.timeline-entry:hover {
+  border-color: oklch(from var(--primary) l c h / 0.3);
+  box-shadow: 0 2px 4px oklch(0 0 0 / 0.03);
+}
+
+.timeline-entry-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-level {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.timeline-misconception {
+  font-size: 0.8125rem;
+  color: var(--foreground);
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+  line-height: 1.35;
+}
+
+.timeline-time {
+  font-size: 0.6875rem;
+  color: var(--muted-foreground);
+  display: block;
+}
+
+.evidence-session {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.session-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.session-stat {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.session-divider {
+  color: var(--muted-foreground);
+}

@@ -1,0 +1,109 @@
+.challenge-card {
+  border: 1px solid var(--border);
+}
+
+.challenge-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.challenge-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.challenge-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 1.25rem;
+}
+
+.challenge-question {
+  margin-bottom: 1.25rem;
+}
+
+.challenge-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.375rem;
+  letter-spacing: -0.01em;
+}
+
+.challenge-field {
+  margin-bottom: 1rem;
+}
+
+.challenge-input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 0.875rem;
+  background: var(--background);
+  border: 1px solid var(--input);
+  border-radius: var(--radius-md);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.challenge-input:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px oklch(from var(--ring) l c h / 0.12);
+}
+
+.challenge-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.challenge-textarea {
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  background: var(--background);
+  border: 1px solid var(--input);
+  border-radius: var(--radius-md);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  line-height: 1.6;
+}
+
+.challenge-textarea:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px oklch(from var(--ring) l c h / 0.12);
+}
+
+.challenge-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.challenge-question-input {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.challenge-footer {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 639px) {
+  .challenge-footer {
+    flex-direction: column;
+  }
+
+  .challenge-footer .btn {
+    width: 100%;
+  }
+}
